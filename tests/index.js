@@ -10,6 +10,10 @@ describe('An EventCenter', function() {
 			emitter = new EventEmitter();
 
 		for (var prop in emitter) {
+			if ('_' == prop.charAt(0)) {
+				// Ignore 'private' properties
+				continue;
+			}
 			var propType = typeof emitter[prop];
 			assert(center[prop] !== undefined, 'EventCenter object should have property "' + prop + '"');
 			assert.equal(typeof center[prop], propType, "EventCenter." + prop + ' should be of type"' + propType + '"');
