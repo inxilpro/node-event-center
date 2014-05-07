@@ -1,5 +1,5 @@
 {
-  "name": "node-event-center",
+  "name": "event-center",
   "version": "0.0.1",
   "description": "Super simple, centralized module for managing application events",
   "main": "index.js",
